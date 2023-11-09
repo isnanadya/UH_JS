@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Keliling Jajar Genjang</title>
+</head>
+<body>
+    <h1>Kalkulator Keliling Jajar Genjang</h1>
+
+    <form>
+        <label for="panjangA">Panjang A:</label>
+        <input type="number" id="panjangA" name="panjangA">
+        
+        <label for="panjangB">Panjang B:</label>
+        <input type="number" id="panjangB" name="panjangB">
+        
+        <button type="button" onclick="hitungKeliling()">Hitung Keliling</button>
+    </form>
+
+    <p>Keliling Jajar Genjang: <span id="hasilKeliling">Hasil akan ditampilkan di sini</span></p>
+
+    <script>
+        function hitungKeliling() {
+            // Mengambil nilai panjang A dan panjang B dari input
+            var panjangA = parseFloat(document.getElementById('panjangA').value);
+            var panjangB = parseFloat(document.getElementById('panjangB').value);
+
+            // Menghitung keliling jajar genjang (2 x (a + b))
+            var keliling = 2 * (panjangA + panjangB);
+
+            // Menampilkan hasil keliling di dalam elemen dengan id 'hasilKeliling'
+            document.getElementById('hasilKeliling').textContent = keliling;
+        }
+    </script>
+</body>
+</html>

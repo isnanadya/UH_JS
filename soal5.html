@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suara Hewan</title>
+</head>
+<body>
+    <label for="hewanInput">Masukkan nama hewan (kucing atau anjing): </label>
+    <input type="text" id="hewanInput">
+    <button onclick="tampilkanSuaraHewan()">Tampilkan Suara</button>
+
+    <p id="suaraHewan"></p>
+
+    <script>
+        function tampilkanSuaraHewan() {
+            var inputHewan = document.getElementById("hewanInput").value.toLowerCase();
+            var suaraHewan = "";
+
+            if (inputHewan === "kucing") {
+                suaraHewan = "meong";
+            } else if (inputHewan === "anjing") {
+                suaraHewan = "guguk";
+            } else {
+                suaraHewan = "Hewan tidak dikenali";
+            }
+
+            document.getElementById("suaraHewan").textContent = "Suara " + inputHewan + ": " + suaraHewan;
+        }
+    </script>
+</body>
+</html>

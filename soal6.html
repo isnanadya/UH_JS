@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Smartphone</title>
+</head>
+<body>
+    <h2>Program Jenis Smartphone</h2>
+    <label for="input">Masukkan spesifikasi: </label>
+    <input type="text" id="input" name="input" required>
+    <button onclick="tampilkanJenis()">Tampilkan Jenis</button>
+
+    <p id="jenis"></p>
+
+    <script>
+        function tampilkanJenis() {
+            const input = document.getElementById('input').value.toLowerCase();
+            let jenis = '';
+
+            if (input === '10mp') {
+                jenis = 'kamera';
+            } else if (input === '128gb') {
+                jenis = 'memori';
+            } else {
+                jenis = 'Spesifikasi tidak dikenal!';
+            }
+
+            document.getElementById('jenis').innerText = jenis;
+        }
+    </script>
+</body>
+</html>

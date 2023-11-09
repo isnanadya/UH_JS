@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seragam Sekolah</title>
+</head>
+<body>
+    <h2>Program Seragam Sekolah</h2>
+    <label for="hari">Masukkan hari: </label>
+    <input type="text" id="hari" name="hari" required>
+    <button onclick="tampilkanSeragam()">Tampilkan Seragam</button>
+
+    <script>
+        function tampilkanSeragam() {
+            const hari = document.getElementById('hari').value.toLowerCase();
+            let seragam = '';
+
+            switch (hari) {
+                case 'senin':
+                    seragam = 'kemeja putih bawahan biru';
+                    break;
+                case 'selasa':
+                    seragam = 'kemeja merah bawahan hitam';
+                    break;
+                case 'rabu':
+                    seragam = 'kemeja hijau bawahan abu-abu';
+                    break;
+                case 'kamis':
+                    seragam = 'kemeja kuning bawahan cokelat';
+                    break;
+                case 'jumat':
+                    seragam = 'kemeja biru bawahan hitam';
+                    break;
+                case 'sabtu':
+                    seragam = 'kemeja ungu bawahan abu-abu';
+                    break;
+                case 'minggu':
+                    seragam = 'baju bebas';
+                    break;
+                default:
+                    seragam = 'Hari tidak dikenali';
+                    break;
+            }
+
+            console.log(seragam);
+        }
+    </script>
+</body>
+</html>

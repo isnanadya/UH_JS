@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Olahraga dan Skor</title>
+</head>
+<body>
+    <h2>Jenis Olahraga dan Skor</h2>
+    <p id="jenisOlahraga"></p>
+    <p id="totalSkor"></p>
+
+    <script>
+        // Menampilkan jenis olahraga dengan tipe data array
+        const jenisOlahraga = ['renang', 'basket', 'voly', 'sepak bola', 'bulu tangkis'];
+        document.getElementById('jenisOlahraga').innerText = 'Jenis Olahraga: ' + jenisOlahraga.join(', ');
+
+        // Menampilkan score hasil pertandingan
+        const scores = [1, 2, 3, 4, 5];
+
+        // Menghitung total dari setiap nilai dalam array
+        const totalScore = scores.reduce((total, score) => total + score, 0);
+        document.getElementById('totalSkor').innerText = 'Total Skor: ' + totalScore;
+    </script>
+</body>
+</html>

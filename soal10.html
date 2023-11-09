@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Tahun Kabisat</title>
+</head>
+<body>
+    <h2>Program Tahun Kabisat</h2>
+    <label for="tahun">Masukkan tahun: </label>
+    <input type="number" id="tahun" name="tahun" required>
+    <button onclick="cekTahunKabisat()">Cek Tahun Kabisat</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function cekTahunKabisat() {
+            const tahun = parseInt(document.getElementById('tahun').value);
+
+            if (tahun === 1) {
+                document.getElementById('hasil').innerText = 'Bukan tahun kabisat';
+            } else if (tahun % 4 !== 0) {
+                document.getElementById('hasil').innerText = 'Bukan tahun kabisat';
+            } else {
+                document.getElementById('hasil').innerText = 'Tahun kabisat';
+            }
+        }
+    </script>
+</body>
+</html>
